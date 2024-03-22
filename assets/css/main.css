@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Ruslan+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+
+
+body {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.logo-f {
+    font-family: 'Patrick Hand SC';
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PRELOADER */
+.preloader {
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 3;
+    transition: 1s all;
+    opacity: 1;
+    visibility: visible;
+    font-family: "Patrick Hand SC", cursive;
+    font-weight: 900;
+    font-style: normal;
+    text-align: center;
+    line-height: 70vh;
+}
+
+.preloader .loader {
+    color: azure;
+    position: relative;
+    z-index: 2;
+    font-size: 7em;
+}
+
+.logo-b {
+    color: #2CD5C4;
+}
+
+.preloader.done {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes a {
+   0% { transform: translate(12px,80px) scale(0); }
+  25% { transform: translate(12px,80px) scale(0); }
+  50% { transform: translate(12px,80px) scale(1); }
+  75% { transform: translate(80px,80px) scale(1); }
+ 100% { transform: translate(148px,80px) scale(1); }
+}
+@keyframes b {
+   0% { transform: translate(148px,80px) scale(1); }
+ 100% { transform: translate(148px,80px) scale(0); }
+}
+@keyframes c {
+   0% { background: linear-gradient(to right, #2CD5C4 0%, #ffffff 100%); }
+  25% { background: linear-gradient(to right, #2CD5C4 0%, #ffffff 100%); }
+  50% { background: linear-gradient(to right, #2CD5C4 0%, #ffffff 100%); }
+  75% { background: linear-gradient(to right, #2CD5C4 0%, #ffffff 100%); }
+ 100% { background: linear-gradient(to right, #2CD5C4 0%, #ffffff 100%); }
+}
+.ball div {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transform: translate(80px,80px) scale(1);
+  background: linear-gradient(to right, #2CD5C4 0%, #ffffff 100%);
+  animation: a 1.88s infinite cubic-bezier(0,0.5,0.5,1);
+}
+.ball div:nth-child(1) {
+    background: linear-gradient(to right, #2CD5C4 0%, #ffffff 100%);
+  transform: translate(148px,80px) scale(1);
+  animation: b 0.47s infinite cubic-bezier(0,0.5,0.5,1), c 1.88s infinite step-start;
+}.ball div:nth-child(2) {
+  animation-delay: -0.47s;
+  background: linear-gradient(to right, #2CD5C4 0%, #ffffff 100%);
+}.ball div:nth-child(3) {
+  animation-delay: -0.94s;
+  background: linear-gradient(to right, #2CD5C4 0%, #ffffff 100%);
+}.ball div:nth-child(4) {
+  animation-delay: -1.4s;
+  background: linear-gradient(to right, #2CD5C4 0%, #ffffff 100%);
+}.ball div:nth-child(5) {
+  animation-delay: -1.88s;
+  background: linear-gradient(to right, #2CD5C4 0%, #ffffff 100%);
+}
+.spinner     {
+  position: relative;
+  z-index: 1;
+  bottom: 15em;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  overflow: hidden;
+  background: #000000;
+}
+.ball {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0; /* see note above */
+}
+.ball div { box-sizing: content-box; }
+
+
+
